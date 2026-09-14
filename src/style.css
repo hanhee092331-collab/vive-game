@@ -6,15 +6,54 @@
 
 html, body {
   height: 100%;
+  overflow: hidden;
   background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: system-ui, -apple-system, "Apple SD Gothic Neo", sans-serif;
 }
 
-#game {
-  background: #222;
-  image-rendering: pixelated;
-  max-width: 100%;
-  max-height: 100%;
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+#app canvas {
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+
+#status {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2b2b2b;
+  background: #fffdf5;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 3px solid #f8b4c0;
+}
+
+#fallback-btn {
+  pointer-events: auto;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 3px solid #5b9bd5;
+  background: #ffffff;
+  color: #2b2b2b;
+  cursor: pointer;
+}
+
+#fallback-btn:active {
+  background: #cfe6ff;
 }
