@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vive Game</title>
+    <title>아기돼지 삼형제 메타버스 동화</title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <canvas id="game" width="800" height="600"></canvas>
+    <div id="app"></div>
+
+    <!-- 웹캠 원본 영상은 화면에 노출하지 않고 포즈 추정 입력으로만 사용 (정책서 2장) -->
+    <video id="webcam" playsinline muted hidden></video>
+
+    <div id="hud">
+      <p id="status">팔을 들면 앞으로 달려요!</p>
+      <button id="fallback-btn" type="button">탭해서 달리기 (대체 조작)</button>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
